@@ -1,5 +1,7 @@
 package edu.monix;
 
+import java.util.Arrays;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -30,5 +32,20 @@ public class Main {
         System.out.println(" ");
 
         System.out.println(Uni.MaxAbrundeteNote(Noten));
+        System.out.println(" ");
+
+
+        System.out.println("Aufgabe2");
+        NPosZahlen array=new NPosZahlen();
+        int n=5;
+        int[] Zahlen={6,4,1,3,5};
+        array.show(Zahlen);
+        System.out.println("maximale Zahl:"+array.maxZahl(Zahlen));
+        System.out.println("minimale Zahl:"+array.minZahl(Zahlen));
+        Arrays.sort(Zahlen);
+        array.show(Zahlen);
+        System.out.println("maximale Summe:"+array.maxSum(Zahlen));
+        System.out.println("minimale Summe:"+array.minSum(Zahlen));
+        System.out.println(" ");
     }
 }
