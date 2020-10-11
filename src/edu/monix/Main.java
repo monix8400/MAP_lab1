@@ -47,5 +47,36 @@ public class Main {
         System.out.println("maximale Summe:"+array.maxSum(Zahlen));
         System.out.println("minimale Summe:"+array.minSum(Zahlen));
         System.out.println(" ");
+
+
+        System.out.println("Aufgabe3");
+        GrosseZahlen grZahlen=new GrosseZahlen();
+        int[] zahl1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] zahl2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
+
+        int[] rez = grZahlen.summe(zahl1, zahl2);
+        for (int i = 0; i < rez.length; i++)
+            System.out.print(rez[i]);
+        System.out.println(" ");
+
+        int[] zahl3 = {8, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] zahl4 = {5, 4, 0, 0, 0, 0, 0, 0, 0};
+        int[] rez2 = grZahlen.differenz(zahl3, zahl4);
+        for (int i = 0; i < rez2.length; i++)
+            System.out.print(rez2[i]);
+        System.out.println(" ");
+
+        int[] zahl5 = {2, 3, 6, 0, 0, 0, 0, 0, 0};
+        int zahl6 = 2;
+        int[] rez3 = grZahlen.multiplication(zahl5, zahl6);
+        for (int i = 0; i < rez3.length; i++)
+            System.out.print(rez3[i]);
+        System.out.println(" ");
+
+        int[] zahl7 = {2, 3, 6, 0, 0, 0, 0, 0, 0};
+        int zahl8 = 2;
+        int[] rez4 = grZahlen.division(zahl7, zahl8);
+        for (int i = 0; i < rez4.length; i++)
+            System.out.print(rez4[i]);
     }
 }
