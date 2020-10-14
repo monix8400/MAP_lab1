@@ -105,5 +105,9 @@ public class Main {
         int budget=30;
         System.out.println("teuerste USB in Budget: "+shop.budgetUSB(preise,budget));
 
+        int[] tastaturen={04,50,60};
+        int[] USB2={8,12};
+        int budget2=60;
+        System.out.println("ausgegebene Geldgetrag: "+shop.geldbetrag(tastaturen,USB2,budget2));
     }
 }
