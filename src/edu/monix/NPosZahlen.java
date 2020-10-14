@@ -7,7 +7,7 @@ public class NPosZahlen {
     public static int maxZahl( int[] Zahlen){   //sucht die Grosste Zahl des Arrays
         int max=Zahlen[0];
         for (int i=0; i<Zahlen.length;i++){
-            if (i>max){
+            if (Zahlen[i]>max){
                 max=Zahlen[i];}
         }
         return max;
@@ -17,7 +17,7 @@ public class NPosZahlen {
     public static int minZahl( int[] Zahlen){   //sucht die kleinste Zahl des Arrays
         int min=Zahlen[0];
         for (int i=0; i<Zahlen.length;i++){
-            if (i<min){
+            if (Zahlen[i]<min){
                 min=Zahlen[i];
             }
         }

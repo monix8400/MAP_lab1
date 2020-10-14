@@ -3,17 +3,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ElektronikShop {
-    NPosZahlen preis=new NPosZahlen();
 
     public int billigTast(int[] Tastatur){  //gibt die billigste Tastatur zuruck
-        return preis.minZahl(Tastatur);
+
+        return NPosZahlen.minZahl(Tastatur);
     }
 
 
     public int teuerGegenstand(int[]Tastatur, int[] USB ){  //gibt den teuersten Gegenstand zuruck
 
-        int maxTast=preis.maxZahl(Tastatur);
-        int maxUSB=preis.maxZahl(USB);
+        int maxTast=NPosZahlen.maxZahl(Tastatur);
+        int maxUSB=NPosZahlen.maxZahl(USB);
 
         if (maxTast>maxUSB)
             return maxTast;
