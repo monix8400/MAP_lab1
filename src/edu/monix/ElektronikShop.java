@@ -1,16 +1,23 @@
 package edu.monix;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
-public class ElektronikShop {
+public class ElektronikShop {     //PROBLEM4
 
-    public int billigTast(int[] Tastatur){  //gibt die billigste Tastatur zuruck
+    /**
+     * gibt die billigste Tastatur zuruck
+     * @param Tastatur ein Array von Preise
+     * @return die billigste Tastatur
+     */
+    public int billigTast(int[] Tastatur){
         return NPosZahlen.minZahl(Tastatur);
     }
 
-
-    public int teuerGegenstand(int[]Tastatur, int[] USB ){  //gibt den teuersten Gegenstand zuruck
+    /**
+     * gibt den teuersten Gegenstand zuruck
+     * @param Tastatur,USB 2 Arrays von Preise
+     * @return der teuerste Gegenstand
+     */
+    public int teuerGegenstand(int[]Tastatur, int[] USB ){
         int maxTast=NPosZahlen.maxZahl(Tastatur);
         int maxUSB=NPosZahlen.maxZahl(USB);
 
@@ -20,8 +27,13 @@ public class ElektronikShop {
             return maxUSB;
     }
 
-
-    public int budgetUSB(int[] USB,int budget){ //gibt die teuerste Laufwerk,die Markus kaufen kann, zurück
+    /**
+     * gibt der teuerste Laufwerk,der Markus kaufen kann, zurück
+     * @param USB ein Array von Preise
+     * @param budget
+     * @return der teuerste Laufwerk, der gekauft werden kann
+     */
+    public int budgetUSB(int[] USB,int budget){
         int maxPreisUSB=0;
         for(int i=0;i< USB.length;i++){
             if (maxPreisUSB<USB[i] && budget>=USB[i])
@@ -30,34 +42,39 @@ public class ElektronikShop {
         return maxPreisUSB;
     }
 
-
-    public int geldbetrag(int[] Tastatur,int[] USB, int budget){
+    /**
+     * bestimmt den grosten Geldbetrag Markus ausgeben kann
+     * @param Tastatur,USB 2 Arrays von Preise
+     * @param budget
+     * @return ein Geldetrag
+     */
+    public int geldbetrag(int[] Tastatur, int[] USB, int budget){
         int[] sortierteTast= Tastatur;
         Arrays.sort(sortierteTast);
-
+                                                //es werden 2 kopien gemacht damit
         int[] sortierteUSB= USB;
         Arrays.sort(sortierteUSB);
 
         if(budget<sortierteUSB[0]+sortierteTast[0]) //wenn der Geld fur nichts genugt
             return -1;
 
-        int i=Tastatur.length-1;
-        int k=USB.length-1;
-        while (i>=0 && k>=0) {
-            if(Tastatur[i]+USB[k]<=budget)
-                return Tastatur[i]+USB[k];
-            else
-                if (Tastatur[i]<USB[k])
-                    if (i!=0)
+        int i=sortierteTast.length-1;
+        int k=sortierteUSB.length-1;
+        while (i>=0 && k>=0) {              //beginnend vom Ende, solange Elemente in beiden Arrays sind
+            if(sortierteTast[i]+sortierteUSB[k]<=budget)    //wenn die teuersten Elektroniken im budget sind dann ist die Suche fertig
+                return sortierteTast[i]+sortierteUSB[k];
+            else                                            //sonst,
+                if (sortierteTast[i]<sortierteUSB[k])       //der billigste Elektronik(Tastatur vs. USB) wird geandert mit einer billigeren,
+                    if (i!=0)                                   //im Fall wenn es keine andere Tastatur mehr gibt, nimmt man ein anderes USB
                             i=i-1;
                     else
                         k=k-1;
-                else
+                else                                            //und umgekehrt
                     if(k!=0)
                         k=k-1;
                     else
                         i=i-1;
         }
-        return Tastatur[i]+USB[k];
+        return sortierteTast[i]+sortierteUSB[k];
     };
 }

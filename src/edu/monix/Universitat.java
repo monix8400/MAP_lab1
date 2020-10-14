@@ -1,8 +1,13 @@
 package edu.monix;
 
-public class Universitat {
+public class Universitat {     //PROBLEM1
 
-    public static int[] kleineNoten(int[] Noten) {  //liefert ein Array der nichtausreichender Noten zuruck
+    /**
+     * liefert ein Array der nichtausreichender Noten zuruck
+     * @param Noten
+     * @return ein Array der nichtausreichender Noten
+     */
+    public static int[] kleineNoten(int[] Noten) {
         int[] Restanta=new int[Noten.length];
         int k=0;
         for(int i=0; i<Noten.length; i++){
@@ -15,8 +20,12 @@ public class Universitat {
         return Restanta;
     }
 
-
-    public static float Mittel(int[] Noten){ //berechnet den Durchschnitt der Noten
+    /**
+     * berechnet den Durchschnitt der Noten
+     * @param Noten
+     * @return der Durchschnitt
+     */
+    public static float Mittel(int[] Noten){
         int sum=0;
         for(int i=0;i<Noten.length; i++){
             sum=sum+Noten[i];
@@ -24,8 +33,12 @@ public class Universitat {
         return sum/ Noten.length;
     }
 
-
-    public static int[] Abrudnen(int[] Noten){ //liefert ein Array mit agerundete Noten zuruck
+    /**
+     * liefert ein Array mit agerundete Noten zuruck
+     * @param Noten
+     * @return ein Array mit agerundete Noten
+     */
+    public static int[] Abrudnen(int[] Noten){
         int[] tempNoten=new int [Noten.length];
         for(int i=0; i< Noten.length;i++)
             tempNoten[i]=Noten[i];
@@ -42,8 +55,12 @@ public class Universitat {
         return tempNoten;
     }
 
-
-    public static int MaxAbrundeteNote(int[] Noten){ //berechnet die maximale abgerundete Note
+    /**
+     * berechnet die maximale abgerundete Note
+     * @param Noten
+     * @return die maximale abgerundete Note
+     */
+    public static int MaxAbrundeteNote(int[] Noten){
         int[] abgerundet=Abrudnen(Noten);
         int max=0;
         for(int i=0; i< Noten.length;i++){

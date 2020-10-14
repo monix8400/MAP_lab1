@@ -1,5 +1,4 @@
 package edu.monix;
-
 import java.util.Arrays;
 
 public class Main {
@@ -37,6 +36,7 @@ public class Main {
         System.out.println(Uni.MaxAbrundeteNote(Noten));
         System.out.println(" ");
 
+
         //aufgabe2
         System.out.println("Aufgabe2");
         NPosZahlen array=new NPosZahlen();
@@ -52,6 +52,7 @@ public class Main {
         System.out.println("maximale Summe:"+array.maxSum(Zahlen));
         System.out.println("minimale Summe:"+array.minSum(Zahlen));
         System.out.println(" ");
+
 
         //aufgabe3
         System.out.println("Aufgabe3");
@@ -83,13 +84,15 @@ public class Main {
 
         int[] zahl7 = {2, 3, 6, 0, 0, 0, 0, 0, 0};
         int zahl8 = 2;
-        int[] rez4 = grZahlen.division(zahl7, zahl8);
+        //int[] rez4 = grZahlen.division(zahl7, zahl8);
+        char[] rez4 = grZahlen.division(zahl7, zahl8);
         System.out.print("die Division: ");
         for (int i = 0; i < rez4.length; i++)
             System.out.print(rez4[i]);
 
         System.out.println(" ");
         System.out.println(" ");
+
 
         //aufgabe4
         System.out.println("Aufgabe4");
@@ -105,7 +108,7 @@ public class Main {
         int budget=30;
         System.out.println("teuerste USB in Budget: "+shop.budgetUSB(preise,budget));
 
-        int[] tastaturen={04,50,60};
+        int[] tastaturen={40,50,60};
         int[] USB2={8,12};
         int budget2=60;
         System.out.println("ausgegebene Geldgetrag: "+shop.geldbetrag(tastaturen,USB2,budget2));
