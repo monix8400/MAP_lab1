@@ -46,9 +46,9 @@ public class Main {
         array.show(Zahlen);
         System.out.println("maximale Zahl:"+array.maxZahl(Zahlen));
         System.out.println("minimale Zahl:"+array.minZahl(Zahlen));
-        Arrays.sort(Zahlen);
-        System.out.println("Array von sortierte Zahlen: ");
-        array.show(Zahlen);
+        //Arrays.sort(Zahlen);
+        //System.out.println("Array von sortierte Zahlen: ");
+        //array.show(Zahlen);
         System.out.println("maximale Summe:"+array.maxSum(Zahlen));
         System.out.println("minimale Summe:"+array.minSum(Zahlen));
         System.out.println(" ");
@@ -90,7 +90,20 @@ public class Main {
 
         System.out.println(" ");
         System.out.println(" ");
+
         //aufgabe4
         System.out.println("Aufgabe4");
+        ElektronikShop shop=new ElektronikShop();
+
+        int[] tastatur={40,35,70,15,45};
+        System.out.println("billigste Tastatur: "+shop.billigTast(tastatur));
+
+        int[] tastatur2={15,20,10,35};
+        int[] USB={20,15,40,15};
+        System.out.println("teuerste Gegenstand: "+shop.teuerGegenstand(tastatur2,USB));
+        int[] preise={15,45,20};
+        int budget=30;
+        System.out.println("teuerste USB in Budget: "+shop.budgetUSB(preise,budget));
+
     }
 }

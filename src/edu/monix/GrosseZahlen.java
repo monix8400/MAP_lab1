@@ -26,7 +26,7 @@ public class GrosseZahlen {
     }
 
 
-    public static int[] differenz(int[] zahl1, int[] zahl2) {
+    public static int[] differenz(int[] zahl1, int[] zahl2) {   //berechnet die Differenz zwischen 2 Zahlen gleicher Lange
         int[] diff = new int[zahl1.length];
         int[] subtrahend = new int[zahl1.length];
 
@@ -67,7 +67,7 @@ public class GrosseZahlen {
     }
 
 
-    public static int[] multiplication(int[] zahl1, int zahl2) {
+    public static int[] multiplication(int[] zahl1, int zahl2) {    //berechnet die Multiplication 2-er Zahlen gleicher Lange
         int[] produkt = new int[zahl1.length + 1];
         int rest = 0;
         for (int i = zahl1.length - 1; i >= 0; i--) {                  //man geht vom Ende des Arrays nach vorne
@@ -92,7 +92,7 @@ public class GrosseZahlen {
     }
 
 
-    public static int[] division(int[] zahl1,int zahl2) {
+    public static int[] division(int[] zahl1,int zahl2) {   //berechnet die Division 2-er Zahlen gleicher Lange
         int[] quotient = new int[zahl1.length];
         int rest = 0;
         for (int i = 0; i < zahl1.length - 1; i++) {

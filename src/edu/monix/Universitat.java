@@ -2,7 +2,7 @@ package edu.monix;
 
 public class Universitat {
 
-    public static int[] kleineNoten(int[] Noten) {
+    public static int[] kleineNoten(int[] Noten) {  //liefert ein Array der nichtausreichender Noten zuruck
         int[] Restanta=new int[Noten.length];
         int k=0;
         for(int i=0; i<Noten.length; i++){
@@ -16,7 +16,7 @@ public class Universitat {
     }
 
 
-    public static float Mittel(int[] Noten){
+    public static float Mittel(int[] Noten){ //berechnet den Durchschnitt der Noten
         int sum=0;
         for(int i=0;i<Noten.length; i++){
             sum=sum+Noten[i];
@@ -25,7 +25,7 @@ public class Universitat {
     }
 
 
-    public static int[] Abrudnen(int[] Noten){
+    public static int[] Abrudnen(int[] Noten){ //liefert ein Array mit agerundete Noten zuruck
         int[] tempNoten=new int [Noten.length];
         for(int i=0; i< Noten.length;i++)
             tempNoten[i]=Noten[i];
@@ -43,7 +43,7 @@ public class Universitat {
     }
 
 
-    public static int MaxAbrundeteNote(int[] Noten){
+    public static int MaxAbrundeteNote(int[] Noten){ //berechnet die maximale abgerundete Note
         int[] abgerundet=Abrudnen(Noten);
         int max=0;
         for(int i=0; i< Noten.length;i++){
